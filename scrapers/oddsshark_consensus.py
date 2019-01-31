@@ -1,16 +1,22 @@
 import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
+
+from sa_common.models.baseteam import BaseTeam
+from sa_common.models.matchup import Matchup
+from sa_common.models.predicted_outcome import PredictedOutcome
+
 from bs4 import BeautifulSoup
 
 def scrape_page(path):
     # Read from file (TEST ONLY, comment out)
-    with open(path, 'r') as testFile:
+    with open(path, 'r', errors="surrogateescape") as testFile:
         doc = testFile.read()
 
     parsed_data = BeautifulSoup(doc, 'html.parser')
 
-    # Read from NY Post
     #doc = urllib2.urlopen(path)
-    # Grab the lines div
     parent_tag = parsed_data.find("div", {"id": "block-system-main"})
 
     if parent_tag == None:
@@ -35,14 +41,14 @@ def scrape_page(path):
             print("Failed to parse teams tag")
             success = False
             break
+        
+        home_team = BaseTeam(1, teams_tag[0].string)
+        away_team = BaseTeam(1, teams_tag[1].string)
 
-        home_team = teams_tag[0].string
-        away_team = teams_tag[1].string
-
-        print(home_team + " at " + away_team)
+        print(home_team.teamname + " at " + away_team.teamname)
 
         game_data = game_tag.find("tbody").find_all("tr")
-        parse_predicted_score(game_data[0])
+        prediction = parse_predicted_score(game_data[0])
 
     return success
 
@@ -60,13 +66,13 @@ def parse_predicted_score(row_tag):
     score_tag = row_tag.find_all("td")
     if(len(score_tag) != 3):
         print("Failed to parse score tag: {0}".format(row_tag))
-        raise
+        return None
     split_string = score_tag[1].string.split('-')
     if(len(split_string) != 2):
         print("Failed to parse score tag {0}".format(row_tag))
-        raise
-    away_score = float(split_string[0].strip())
-    home_score = float(split_string[1].strip())
-    over_under = score_tag[2].string
+        return None
 
-    print("Away: {0} Home: {1} O/U {2}".format(away_score, home_score, over_under))
+    prediction = PredictedOutcome(float(split_string[1].strip()), float(split_string[0].strip()), score_tag[2].string)
+    print(f"{prediction.to_string()}")
+
+    return prediction
