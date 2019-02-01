@@ -6,4 +6,4 @@ class PredictedOutcome:
         self.over_under = over_under
 
     def to_string(self):
-        return f"Away: {self.away_score} Home: {self.home_score} O/U {self.over_under}"
+        return f"Away: {self.away_score} Home: {self.home_score} O/U {self.over_under}"        

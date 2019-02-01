@@ -9,7 +9,11 @@ from sa_common.models.predicted_outcome import PredictedOutcome
 
 from bs4 import BeautifulSoup
 
-def scrape_page(path):
+def scrape_page(path, isVerbose = False):
+
+    global verbose
+    verbose = isVerbose
+
     # Read from file (TEST ONLY, comment out)
     with open(path, 'r', errors="surrogateescape") as testFile:
         doc = testFile.read()
@@ -45,10 +49,13 @@ def scrape_page(path):
         home_team = BaseTeam(1, teams_tag[0].string)
         away_team = BaseTeam(1, teams_tag[1].string)
 
-        print(home_team.teamname + " at " + away_team.teamname)
+        matchup = Matchup(home_team, away_team, 0, 0)        
+
+        if(verbose):
+            print(home_team.teamname + " at " + away_team.teamname)
 
         game_data = game_tag.find("tbody").find_all("tr")
-        prediction = parse_predicted_score(game_data[0])
+        matchup.add_predictions(parse_predicted_score(game_data[0]))
 
     return success
 
@@ -73,6 +80,7 @@ def parse_predicted_score(row_tag):
         return None
 
     prediction = PredictedOutcome(float(split_string[1].strip()), float(split_string[0].strip()), score_tag[2].string)
-    print(f"{prediction.to_string()}")
+    if(verbose):
+        print(f"{prediction.to_string()}")
 
     return prediction
