@@ -17,10 +17,9 @@ def scrape_page(path, isVerbose = False):
     # Read from file (TEST ONLY, comment out)
     with open(path, 'r', errors="surrogateescape") as testFile:
         doc = testFile.read()
-
+    #doc = urllib2.urlopen(path)
     parsed_data = BeautifulSoup(doc, 'html.parser')
 
-    #doc = urllib2.urlopen(path)
     parent_tag = parsed_data.find("div", {"id": "block-system-main"})
 
     if parent_tag == None:
