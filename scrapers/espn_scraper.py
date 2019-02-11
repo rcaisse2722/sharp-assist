@@ -6,7 +6,9 @@ from sa_common.models.baseteam import BaseTeam
 from bs4 import BeautifulSoup
 from tidylib import tidy_document
 
+# TODO Move these into constants file in sa_common? May be useful in other scrapers
 TIME_REGEX = '^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$'
+RANKING_REGEX = r'\#[0-9]{1,2}'
 
 def scrape_lines(path, isVerbose = False):
     global verbose
@@ -53,7 +55,7 @@ def scrape_teams(matchup_tag):
     split_string = [x.strip(',') for x in matchup_tag.td.text.split()]
     # List of strings is of the form (for example):
     # [0] North
-    # [1] Carolian
+    # [1] Carolina
     # [2] at
     # [3] Duke
     # [4] 5:30
@@ -64,9 +66,8 @@ def scrape_teams(matchup_tag):
     awayTeamName = " ".join([e for i, e in enumerate(split_string) if i in [0, atIndex - 1]])
     homeTeamName = " ".join([e for i, e in enumerate(split_string) if i in [atIndex + 1, gametimeIndex - 1]])
 
-    # TODO remove rankings ('#22')
-
-    return awayTeamName, homeTeamName
+    # remove potential ranking from strings ('#3 Kansas')
+    return [re.sub(RANKING_REGEX, '', x).strip() for x in [awayTeamName, homeTeamName]]
 
 # Scrape line and over/under data for an individual book
 # <tr class="oddrow">
