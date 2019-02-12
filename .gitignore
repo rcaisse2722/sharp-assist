@@ -1,3 +1,4 @@
 sa_common/models/__pycache__
 scrapers/.idea
-scrapers/__pycache__
+**/__pycache__
+**/.vscode

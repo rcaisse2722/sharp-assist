@@ -2,15 +2,15 @@ class Matchup:
 
     home = None
     away = None
-    spread = None
-    over_under = None
-    predictions = []
+    spread = []
+    over_under = []
 
-    def __init__(self, home, away, spread, over_under):
+    def __init__(self, home, away):
         self.home = home
         self.away = away
-        self.spread = spread
-        self.over_under = over_under
 
-    def add_predictions(self, predictions):    
-        self.predictions.append(predictions)
+    def add_spread(self, spread):    
+        self.spread.append(spread)
+
+    def add_over_under(self, over_under):
+        self.over_under.append(over_under)
