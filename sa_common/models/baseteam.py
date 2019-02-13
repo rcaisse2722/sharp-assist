@@ -6,3 +6,9 @@ class BaseTeam:
         self.nickname = nickname
         self.conference = conference
         self.teamname = aliases[0]
+
+    def __str__(self):
+        return str(self.teamname)
+
+    def __repr__(self):
+        return self.__str__()

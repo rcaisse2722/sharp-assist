@@ -41,12 +41,12 @@ def scrape_page(data_provider, team_repository, is_verbose = False):
             print("Failed to parse teams tag")
             break
 
-        home_team_str = teams_tag[0].string.strip()
+        home_team_str = teams_tag[1].string.strip(';')
         home_team = team_repository.get_team(home_team_str)
         if(home_team == None):
             print(f"Team {home_team_str} not found in repository")
             break
-        away_team_str = teams_tag[1].string.strip()
+        away_team_str = teams_tag[0].string.strip(';')
         away_team = team_repository.get_team(away_team_str)
         if(away_team == None):
             print(f"Team {away_team_str} not found in repository")

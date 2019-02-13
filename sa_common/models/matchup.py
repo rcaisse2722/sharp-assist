@@ -1,3 +1,5 @@
+import statistics
+
 class Matchup:
 
     home = None
@@ -8,6 +10,14 @@ class Matchup:
     def __init__(self, home, away):
         self.home = home
         self.away = away
+        self.spread = []
+        self.over_under = []
+
+    def __str__(self):
+        return f"{self.away} at {self.home}, {statistics.mean(self.spread)}"
+
+    def __repr__(self):
+        return self.__str__()
 
     def add_spread(self, spread):    
         self.spread.append(spread)

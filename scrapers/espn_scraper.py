@@ -55,15 +55,21 @@ def scrape_lines(data_provider, team_repository, isVerbose = False):
             # Line data from for one book
             elif child.attrs["class"][0] == "oddrow" or child.attrs["class"][0] == "evenrow":
                 book_name, spread, over_under = scrape_book_data(child)
-                if(spread is None or over_under is None):
-                    print(f"No data for {book_name}")
+                if(spread is None and over_under is None):
+                    print(f"No data found for {book_name}")
                     continue
-                elif(verbose):
+
+                if(verbose):
                     print(f"{book_name}: Spread: {spread} O/U: {over_under}")
 
-                current_matchup.add_spread(spread)
-                current_matchup.add_over_under(over_under)
+                if(spread != None):
+                    current_matchup.add_spread(spread)
+                if(over_under != None):
+                    current_matchup.add_over_under(over_under)
     
+    if(current_matchup != None):
+        matchups.append(current_matchup)
+
     return matchups
 
                  
@@ -124,7 +130,10 @@ def scrape_book_data(book_tag):
             continue
         elif retrieved_spread == False:
             try:
-                spread = float(child.find("td").text.split()[0])
+                if("EVEN" in child.text):
+                    spread = 0
+                else:
+                    spread = float(child.find("td").text.split()[0])
             except:
                 spread = None
             retrieved_spread = True
