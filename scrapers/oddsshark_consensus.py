@@ -4,21 +4,17 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
 
 from sa_common.models.baseteam import BaseTeam
-from sa_common.models.matchup import Matchup
+from sa_common.models.matchup_prediction import MatchupPrediction
 from sa_common.models.predicted_outcome import PredictedOutcome
 
 from bs4 import BeautifulSoup
 
-def scrape_page(path, isVerbose = False):
+def scrape_page(data_provider, team_repository, is_verbose = False):
 
     global verbose
-    verbose = isVerbose
+    verbose = is_verbose
 
-    # Read from file (TEST ONLY, comment out)
-    with open(path, 'r', errors="surrogateescape") as testFile:
-        doc = testFile.read()
-    #doc = urllib2.urlopen(path)
-    parsed_data = BeautifulSoup(doc, 'html.parser')
+    parsed_data = BeautifulSoup(data_provider.get_html(), 'html.parser')
 
     parent_tag = parsed_data.find("div", {"id": "block-system-main"})
 
@@ -32,7 +28,8 @@ def scrape_page(path, isVerbose = False):
         print("Failed to parse games from OddsShark")
         return
 
-    success = True
+    predictions = []
+
     for game_tag in all_games:
         teams_tag_wrapper = game_tag.find("div", {"class" : "caption-wrapper"})
         if teams_tag_wrapper is None:
@@ -42,21 +39,30 @@ def scrape_page(path, isVerbose = False):
         teams_tag = teams_tag_wrapper.find_all("span", {"class" : "name-short"})
         if teams_tag is None or len(teams_tag) != 2:
             print("Failed to parse teams tag")
-            success = False
             break
-        
-        home_team = BaseTeam(1, teams_tag[0].string)
-        away_team = BaseTeam(1, teams_tag[1].string)
 
-        matchup = Matchup(home_team, away_team, 0, 0)        
+        home_team_str = teams_tag[1].string.strip(';')
+        home_team = team_repository.get_team(home_team_str)
+        if(home_team == None):
+            print(f"Team {home_team_str} not found in repository")
+            break
+        away_team_str = teams_tag[0].string.strip(';')
+        away_team = team_repository.get_team(away_team_str)
+        if(away_team == None):
+            print(f"Team {away_team_str} not found in repository")
+            break
+
+        matchup = MatchupPrediction(home_team, away_team)        
 
         if(verbose):
-            print(home_team.teamname + " at " + away_team.teamname)
+            print(away_team.teamname + " at " + home_team.teamname)
 
         game_data = game_tag.find("tbody").find_all("tr")
         matchup.add_predictions(parse_predicted_score(game_data[0]))
 
-    return success
+        predictions.append(matchup)
+
+    return predictions
 
 # < tr >
 # < td > < img

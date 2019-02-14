@@ -1,0 +1,354 @@
+﻿# ID,Conference,Nickname,Alias 0,Alias 1,...Alias n
+1,America East,Great Danes,University at Albany SUNY,Albany,ALBNY
+2,America East,Bearcats,Binghamton University,Binghamton,BINGH
+3,America East,Hawks,University of Hartford,Hartford,HARTF
+4,America East,Black Bears,University of Maine,Maine
+5,America East,Retrievers,University of Maryland Baltimore County,UMBC
+6,America East,River Hawks,University of Massachusetts Lowell,UMass Lowell,LOWELL
+7,America East,Wildcats,University of New Hampshire,New Hampshire,NH
+8,America East,Seawolves,Stony Brook University,Stony Brook
+9,America East,Catamounts,University of Vermont,Vermont,VERMT
+10,The American,Knights,University of Central Florida,UCF
+11,The American,Bearcats,University of Cincinnati,Cincinnati
+12,The American,Huskies,University of Connecticut,UConn
+13,The American,Pirates,East Carolina University,East Carolina,E.CAR
+14,The American,Cougars,University of Houston,Houston
+15,The American,Tigers,University of Memphis,Memphis,MEMPH
+16,The American,Bulls,University of South Florida,USF,South Florida,S.FLA
+17,The American,Mustangs,Southern Methodist University,SMU
+18,The American,Owls,Temple University,Temple,TEMPL
+19,The American,Green Wave,Tulane University,Tulane
+20,The American,Golden Hurricane,University of Tulsa,Tulsa
+21,The American,Shockers,Wichita State University,Wichita State
+22,ACC,Eagles,Boston College,BC
+23,ACC,Tigers,Clemson University,Clemson,CLEMS
+24,ACC,Blue Devils,Duke University,Duke
+25,ACC,Seminoles,Florida State University,Florida State,FLAST
+26,ACC,Yellow Jackets,Georgia Institute of Technology,Georgia Tech,GATEC
+27,ACC,Cardinals,University of Louisville,Louisville,LOUIS
+28,ACC,Hurricanes,University of Miami,Miami
+29,ACC,Tar Heels,University of North Carolina at Chapel Hill,North Carolina,UNC
+30,ACC,Wolfpack,North Carolina State University,NC State,NCST
+31,ACC,Fighting Irish,University of Notre Dame,Notre Dame
+32,ACC,Panthers,University of Pittsburgh,Pitt,Pittsburgh
+33,ACC,Orange,Syracuse University,Syracuse,SYRA
+34,ACC,Cavaliers,University of Virginia,Virginia,VIRGA
+35,ACC,Hokies,Virginia Polytechnic Institute and State University,Virginia Tech,VATEC
+36,ACC,Demon Deacons,Wake Forest University,Wake Forest,WAKE
+37,ASUN,Eagles,Florida Gulf Coast University,Florida Gulf Coast,FGCU,FLAGC
+38,ASUN,Dolphins,Jacksonville University,Jacksonville,JAXVL
+39,ASUN,Owls,Kennesaw State University,Kennesaw State,Kennesaw St,KENNE
+40,ASUN,Flames,Liberty University,Liberty,LIBRT
+41,ASUN,Bisons,Lipscomb University,Lipscomb,LIPSC
+42,ASUN,Highlanders,New Jersey Institute of Technology,NJIT
+43,ASUN,Lions,University of North Alabama,North Alabama
+44,ASUN,Ospreys,University of North Florida,North Florida,N.FLA
+45,ASUN,Hatters,Stetson University,Stetson,STETS
+46,A-10,Wildcats,Davidson College,Davidson,DAVID
+47,A-10,Flyers,University of Dayton,Dayton
+48,A-10,Dukes,Duquesne University,Duquesne,DUQU
+49,A-10,Rams,Fordham University,Fordham,FORDM
+50,A-10,Patriots,George Mason University,George Mason,GMASN
+51,A-10,Colonials,George Washington University,George Washington,G Washington,GWASH
+52,A-10,Explorers,La Salle University,La Salle,LASAL
+53,A-10,Minutemen,University of Massachusetts Amherst,UMass
+54,A-10,Rams,University of Rhode Island,Rhode Island
+55,A-10,Spiders,University of Richmond,Richmond,RICHM
+56,A-10,Bonnies,St. Bonaventure University,St. Bonaventure,STBON
+57,A-10,Hawks,Saint Joseph's University,Saint Joseph's,STJOE
+58,A-10,Billikens,Saint Louis University,Saint Louis,STL
+59,A-10,Rams,Virginia Commonwealth University,VCU,VACOM
+60,Big East,Bulldogs,Butler University,Butler,BUTLR
+61,Big East,Bluejays,Creighton University,Creighton,CREIG
+62,Big East,Blue Demons,DePaul University,DePaul,DPAUL
+63,Big East,Hoyas,Georgetown University,Georgetown,GTOWN
+64,Big East,Golden Eagles,Marquette University,Marquette,MARQ
+65,Big East,Friars,Providence College,Providence,PROV
+66,Big East,Red Storm,St. John's University,St. John's,STJON
+67,Big East,Pirates,Seton Hall University,Seton Hall,SETON
+68,Big East,Wildcats,Villanova University,Villanova,VILLA
+69,Big East,Musketeers,Xavier University,Xavier,XAVIR
+70,Big Sky,Eagles,Eastern Washington University,Eastern Washington
+71,Big Sky,Vandals,University of Idaho,Idaho
+72,Big Sky,Bengals,Idaho State University,Idaho State
+73,Big Sky,Grizzlies,University of Montana,Montana
+74,Big Sky,Bobcats,Montana State University,Montana State
+75,Big Sky,Lumberjacks,Northern Arizona University,Northern Arizona
+76,Big Sky,Bears,University of Northern Colorado,Northern Colorado
+77,Big Sky,Vikings,Portland State University,Portland State,PORST
+78,Big Sky,Hornets,California State University Sacramento,Sacramento State,Sacramento St,SACRA
+79,Big Sky,Thunderbirds,Southern Utah University,Southern Utah
+80,Big Sky,Wildcats,Weber State University,Weber State
+81,Big South,Fighting Camels,Campbell University,Campbell,CAMBP
+82,Big South,Buccaneers,Charleston Southern University,Charleston Southern,Charleston So,CHASO
+83,Big South,Runnin' Bulldogs,Gardner–Webb University,Gardner–Webb,G.WEB
+84,Big South,Pirates,Hampton University,Hampton,HAMPT
+85,Big South,Panthers,High Point University,High Point,HIGHP
+86,Big South,Lancers,Longwood University,Longwood,LONGW
+87,Big South,Blue Hose,Presbyterian College,Presbyterian,PRESB
+88,Big South,Highlanders,Radford University,Radford
+89,Big South,Bulldogs,University of North Carolina at Asheville,UNC Asheville,NCASH
+90,Big South,Spartans,University of South Carolina Upstate,USC Upstate,SC Upstate,USCUP
+91,Big South,Eagles,Winthrop University,Winthrop,WINTH
+92,Big Ten,Fighting Illini,University of Illinois at Urbana–Champaign,Illinois
+93,Big Ten,Hoosiers,Indiana University Bloomington,Indiana
+94,Big Ten,Hawkeyes,University of Iowa,Iowa
+95,Big Ten,Terrapins,University of Maryland College Park,Maryland,MARYL
+96,Big Ten,Wolverines,University of Michigan,Michigan,MICH
+97,Big Ten,Spartans,Michigan State University,Michigan State,MICHS
+98,Big Ten,Golden Gophers,University of Minnesota,Minnesota,MINN
+99,Big Ten,Cornhuskers,University of Nebraska–Lincoln,Nebraska,NEBRS
+100,Big Ten,Wildcats,Northwestern University,Northwestern,NWEST
+101,Big Ten,Buckeyes,Ohio State University,Ohio State
+102,Big Ten,Nittany Lions,Pennsylvania State University,Penn State,PENST
+103,Big Ten,Boilermakers,Purdue University,Purdue,PURDU
+104,Big Ten,Scarlet Knights,Rutgers University–New Brunswick,Rutgers,RUTGR
+105,Big Ten,Badgers,University of Wisconsin–Madison,Wisconsin,WISCN
+106,Big 12,Bears,Baylor University,Baylor,BAYLR
+107,Big 12,Cyclones,Iowa State University,Iowa State
+108,Big 12,Jayhawks,University of Kansas,Kansas,KANSA
+109,Big 12,Wildcats,Kansas State University,Kansas State,KANST
+110,Big 12,Sooners,University of Oklahoma,Oklahoma,OKLA
+111,Big 12,Cowboys,Oklahoma State University–Stillwater,Oklahoma State,OKST
+112,Big 12,Longhorns,University of Texas at Austin,Texas
+113,Big 12,Horned Frogs,Texas Christian University,TCU
+114,Big 12,Red Raiders,Texas Tech University,Texas Tech,TEXTK
+115,Big 12,Mountaineers,West Virginia University,West Virginia
+116,Big West,Mustangs,California Polytechnic State University,Cal Poly
+117,Big West,Titans,California State University Fullerton,Cal State Fullerton,CSU Fullerton,FULLR
+118,Big West,Matadors,California State University Northridge,Cal State Northridge,CSU Northridge,CSNOR
+119,Big West,Rainbow Warriors,University of Hawaiʻi at Mānoa,Hawaii
+120,Big West,49ers,California State University Long Beach,Long Beach State,Long Beach St,LONGB
+121,Big West,Aggies,University of California Davis,UC Davis,UCDAV
+122,Big West,Anteaters,University of California Irvine,UC Irvine
+123,Big West,Highlanders,University of California Riverside,UC Riverside
+124,Big West,Gauchos,University of California Santa Barbara,UC Santa Barbara
+125,CAA,Cougars,College of Charleston,Charleston
+126,CAA,Fightin' Blue Hens,University of Delaware,Delaware
+127,CAA,Dragons,Drexel University,Drexel
+128,CAA,Phoenix,Elon University,Elon
+129,CAA,Pride,Hofstra University,Hofstra
+130,CAA,Dukes,James Madison University,James Madison
+131,CAA,Huskies,Northeastern University,Northeastern
+132,CAA,Tigers,Towson University,Towson
+133,CAA,Seahawks,University of North Carolina at Wilmington,UNC Wilmington
+134,CAA,Tribe,College of William & Mary,William & Mary
+135,Conference USA,49ers,University of North Carolina at Charlotte,Charlotte
+136,Conference USA,Owls,Florida Atlantic University,Florida Atlantic
+137,Conference USA,Panthers,Florida International University,FIU
+138,Conference USA,Bulldogs,Louisiana Tech University,Louisiana Tech
+139,Conference USA,Thundering Herd,Marshall University,Marshall
+140,Conference USA,Blue Raiders,Middle Tennessee State University,Middle Tennessee
+141,Conference USA,Mean Green,University of North Texas,North Texas
+142,Conference USA,Monarchs,Old Dominion University,Old Dominion
+143,Conference USA,Owls,Rice University,Rice
+144,Conference USA,Golden Eagles,University of Southern Mississippi,Southern Miss
+145,Conference USA,Blazers,University of Alabama at Birmingham,UAB
+146,Conference USA,Miners,University of Texas at El Paso,UTEP
+147,Conference USA,Roadrunners,University of Texas at San Antonio,UTSA
+148,Conference USA,Hilltoppers,Western Kentucky University,Western Kentucky
+149,Horizon League,Vikings,Cleveland State University,Cleveland State
+150,Horizon League,Titans,University of Detroit Mercy,Detroit Mercy
+151,Horizon League,Jaguars,Indiana University – Purdue University Indianapolis,IUPUI
+152,Horizon League,Panthers,University of Wisconsin-Milwaukee,Milwaukee
+153,Horizon League,Norse,Northern Kentucky University,Northern Kentucky
+154,Horizon League,Golden Grizzlies,Oakland University,Oakland
+155,Horizon League,Flames,University of Illinois at Chicago,UIC
+156,Horizon League,Phoenix,University of Wisconsin–Green Bay,Green Bay
+157,Horizon League,Raiders,Wright State University,Wright State
+158,Horizon League,Penguins,Youngstown State University,Youngstown State
+159,Ivy League,Bears,Brown University,Brown
+160,Ivy League,Lions,Columbia University,Columbia
+161,Ivy League,Big Red,Cornell University,Cornell
+162,Ivy League,Big Green,Dartmouth College,Dartmouth
+163,Ivy League,Crimson,Harvard University,Harvard
+164,Ivy League,Quakers,University of Pennsylvania,Penn
+165,Ivy League,Tigers,Princeton University,Princeton
+166,Ivy League,Bulldogs,Yale University,Yale
+167,MAAC,Golden Griffins,Canisius College,Canisius
+168,MAAC,Stags,Fairfield University,Fairfield
+169,MAAC,Gaels,Iona College,Iona
+170,MAAC,Jaspers,Manhattan College,Manhattan
+171,MAAC,Red Foxes,Marist College,Marist
+172,MAAC,Hawks,Monmouth University,Monmouth
+173,MAAC,Purple Eagles,Niagara University,Niagara
+174,MAAC,Bobcats,Quinnipiac University,Quinnipiac,QUINN
+175,MAAC,Broncs,Rider University,Rider
+176,MAAC,Peacocks,Saint Peter's University,Saint Peter's
+177,MAAC,Saints,Siena College,Siena
+178,MAC,Zips,University of Akron,Akron
+179,MAC,Cardinals,Ball State University,Ball State
+180,MAC,Falcons,Bowling Green State University,Bowling Green,BOWLG
+181,MAC,Bulls,University at Buffalo,Buffalo,BUFF
+182,MAC,Chippewas,Central Michigan University,Central Michigan,Cent Michigan,CMICH
+183,MAC,Eagles,Eastern Michigan University,Eastern Michigan,E Michigan,EMICH
+184,MAC,Golden Flashes,Kent State University,Kent State
+185,MAC,RedHawks,Miami University,Ohio
+186,MAC,Huskies,Northern Illinois University,Northern Illinois,N Illinois,N.ILL
+187,MAC,Bobcats,Ohio University,Ohio
+188,MAC,Rockets,University of Toledo,Toledo
+189,MAC,Broncos,Western Michigan University,Western Michigan,W Michigan,WMICH
+190,MEAC,Wildcats,Bethune–Cookman University,Bethune–Cookman,BCOOK,Bethune-Cookman
+191,MEAC,Eagles,Coppin State University,Coppin State,COPIN,Coppin St
+192,MEAC,Hornets,Delaware State University,Delaware State,DELST
+193,MEAC,Rattlers,Florida Agricultural and Mechanical University,Florida A&M,FLA&M
+194,MEAC,Bison,Howard University,Howard,HOWRD
+195,MEAC,Hawks,University of Maryland Eastern Shore,UMES,MD-ES,MD-Eastern
+196,MEAC,Bears,Morgan State University,Morgan State,MORGN
+197,MEAC,Spartans,Norfolk State University,Norfolk State,NORFK,Norfolk St
+198,MEAC,Aggies,North Carolina Agricultural and Technical State University,North Carolina A&T,NCA&T,NC A&T
+199,MEAC,Eagles,North Carolina Central University,NCCU,NCCEN,NC Central
+200,MEAC,Tigers,Savannah State University,Savannah State,SAVAN
+201,MEAC,Bulldogs,South Carolina State University,SC State,SC.ST
+202,Missouri Valley,Braves,Bradley University,Bradley,BRAD
+203,Missouri Valley,Bulldogs,Drake University,Drake
+204,Missouri Valley,Purple Aces,University of Evansville,Evansville,EVANS
+205,Missouri Valley,Redbirds,Illinois State University,Illinois State,ILLST
+206,Missouri Valley,Sycamores,Indiana State University,Indiana State,INDST
+207,Missouri Valley,Ramblers,Loyola University Chicago,Loyola–Chicago,LOYCH
+208,Missouri Valley,Bears,Missouri State University,Missouri State,MIZST
+209,Missouri Valley,Panthers,University of Northern Iowa,Northern Iowa,NIOWA
+210,Missouri Valley,Salukis,Southern Illinois University Carbondale,Southern Illinois,So Illinois,S.ILL
+211,Missouri Valley,Crusaders,Valparaiso University,Valparaiso,VALPO
+212,Mountain West,Falcons,United States Air Force Academy,Air Force,AIRFO
+213,Mountain West,Broncos,Boise State University,Boise State,BOISE
+214,Mountain West,Rams,Colorado State University,Colorado State,COLST
+215,Mountain West,Bulldogs,California State University Fresno,Fresno State,FRSNO
+216,Mountain West,Wolf Pack,University of Nevada Reno,Nevada
+217,Mountain West,Lobos,University of New Mexico,New Mexico,NEWMX
+218,Mountain West,Aztecs,San Diego State University,San Diego State,SD.ST
+219,Mountain West,Spartans,San Jose State University,San Jose State,San JosÃ© St,SJ.ST
+220,Mountain West,Runnin' Rebels,University of Nevada Las Vegas,UNLV
+221,Mountain West,Aggies,Utah State University,Utah State,UT.ST
+222,Mountain West,Cowboys,University of Wyoming,Wyoming,WYOM
+223,Northeast,Bulldogs,Bryant University,Bryant
+224,Northeast,Blue Devils,Central Connecticut State University,Central Connecticut
+225,Northeast,Knights,Fairleigh Dickinson University,Fairleigh Dickinson
+226,Northeast,Blackbirds,Long Island University (Brooklyn Campus),LIU Brooklyn
+227,Northeast,Mountaineers,Mount St. Mary's University,Mount St. Mary's
+228,Northeast,Colonials,Robert Morris University,Robert Morris
+229,Northeast,Pioneers,Sacred Heart University,Sacred Heart
+230,Northeast,Terriers,St. Francis College,St. Francis Brooklyn
+231,Northeast,Red Flash,Saint Francis University,St. Francis (PA)
+232,Northeast,Seahawks,Wagner College,Wagner
+233,Ohio Valley,Governors,Austin Peay State University,Austin Peay
+234,Ohio Valley,Bruins,Belmont University,Belmont
+235,Ohio Valley,Panthers,Eastern Illinois University,Eastern Illinois
+236,Ohio Valley,Colonels,Eastern Kentucky University,Eastern Kentucky
+237,Ohio Valley,Gamecocks,Jacksonville State University,Jacksonville State
+238,Ohio Valley,Eagles,Morehead State University,Morehead State
+239,Ohio Valley,Racers,Murray State University,Murray State
+240,Ohio Valley,Redhawks,Southeast Missouri State University,SE Missouri State
+241,Ohio Valley,Cougars,Southern Illinois University Edwardsville,SIU Edwardsville
+242,Ohio Valley,Skyhawks,University of Tennessee at Martin,UT–Martin
+243,Ohio Valley,Tigers,Tennessee State University,Tennessee State
+244,Ohio Valley,Golden Eagles,Tennessee Technological University,Tennessee Tech
+245,Pac-12,Wildcats,University of Arizona,Arizona
+246,Pac-12,Sun Devils,Arizona State University,Arizona State,ARZST
+247,Pac-12,Golden Bears,University of California Berkeley,California,CAL
+248,Pac-12,Buffaloes,University of Colorado Boulder,Colorado,COLO
+249,Pac-12,Ducks,University of Oregon,Oregon
+250,Pac-12,Beavers,Oregon State University,Oregon State
+251,Pac-12,Cardinal,Stanford University,Stanford,STANF
+252,Pac-12,Bruins,University of California Los Angeles,UCLA
+253,Pac-12,Trojans,University of Southern California,USC
+254,Pac-12,Utes,University of Utah,Utah
+255,Pac-12,Huskies,University of Washington,Washington
+256,Pac-12,Cougars,Washington State University,Washington State
+257,Patriot League,Eagles,American University,American,AMERN
+258,Patriot League,Black Knights,United States Military Academy,Army
+259,Patriot League,Terriers,Boston University,BU,Boston Univ,BOSTU
+260,Patriot League,Bison,Bucknell University,Bucknell,BUCKN
+261,Patriot League,Raiders,Colgate University,Colgate,COLGT
+262,Patriot League,Crusaders,College of the Holy Cross,Holy Cross,HOLYC
+263,Patriot League,Leopards,Lafayette College,Lafayette,LAFAY
+264,Patriot League,Mountain Hawks,Lehigh University,Lehigh,LEHIH
+265,Patriot League,Greyhounds,Loyola University Maryland,Loyola MD,LOYOL
+266,Patriot League,Midshipmen,United States Naval Academy,Navy
+267,SEC,Crimson Tide,University of Alabama,Alabama,ALA
+268,SEC,Razorbacks,University of Arkansas,Arkansas,ARK
+269,SEC,Tigers,Auburn University,Auburn,AUBRN
+270,SEC,Gators,University of Florida,Florida,FLA
+271,SEC,Bulldogs,University of Georgia,Georgia,GA
+272,SEC,Wildcats,University of Kentucky,Kentucky,KENTY
+273,SEC,Tigers,Louisiana State University,LSU
+274,SEC,Rebels,University of Mississippi,Ole Miss,MISS
+275,SEC,Bulldogs,Mississippi State University,Mississippi State,Mississippi St,MISST
+276,SEC,Tigers,University of Missouri,Missouri,MIZZU
+277,SEC,Gamecocks,University of South Carolina,South Carolina,S.CAR
+278,SEC,Volunteers,University of Tennessee,Tennessee,TENN
+279,SEC,Aggies,Texas A&M University,Texas A&M,TEXAM
+280,SEC,Commodores,Vanderbilt University,Vanderbilt,VANDY
+281,Southern,Mocs,University of Tennessee at Chattanooga,Chattanooga
+282,Southern,Bulldogs,The Citadel,Citadel
+283,Southern,Buccaneers,East Tennessee State University,East Tennessee State
+284,Southern,Paladins,Furman University,Furman
+285,Southern,Bears,Mercer University,Mercer
+286,Southern,Bulldogs,Samford University,Samford
+287,Southern,Spartans,University of North Carolina at Greensboro,UNC Greensboro
+288,Southern,Keydets,Virginia Military Institute,VMI
+289,Southern,Catamounts,Western Carolina University,Western Carolina
+290,Southern,Terriers,Wofford College,Wofford
+291,Southland,Wildcats,Abilene Christian University,Abilene Christian,Abil Christian,ABILE
+292,Southland,Bears,University of Central Arkansas,Central Arkansas,Cent Arkansas,C.ARK
+293,Southland,Huskies,Houston Baptist University,Houston Baptist,HOUBPT
+294,Southland,Cardinals,University of the Incarnate Word,Incarnate Word,INCAR
+295,Southland,Cardinals,Lamar University,Lamar
+296,Southland,Cowboys,McNeese State University,McNeese State,McNeese,MCNEE
+297,Southland,Privateers,University of New Orleans,New Orleans
+298,Southland,Colonels,Nicholls State University,Nicholls,NICHL
+299,Southland,Demons,Northwestern State University,Northwestern State,Northwestern St,NWST
+300,Southland,Bearkats,Sam Houston State University,Sam Houston State,Sam Houston St,SAMHO
+301,Southland,Lions,Southeastern Louisiana University,SE Louisiana,SELA
+302,Southland,Lumberjacks,Stephen F. Austin State University,Stephen F. Austin,SF Austin,SFA
+303,Southland,Islanders,Texas A&M University-Corpus Christi,Texas A&M-CC,TEXCC
+304,SWAC,Bulldogs,Alabama Agricultural and Mechanical University,Alabama A&M,ALA&M
+305,SWAC,Hornets,Alabama State University,Alabama State,ALAST
+306,SWAC,Braves,Alcorn State University,Alcorn State,ALCRN
+307,SWAC,Golden Lions,University of Arkansas at Pine Bluff,Arkansas–Pine Bluff,ARKPB,Ark-Pine Bluff
+308,SWAC,Tigers,Grambling State University,Grambling State,Grambling,GRAMB
+309,SWAC,Tigers,Jackson State University,Jackson State,JACKS
+310,SWAC,Delta Devils,Mississippi Valley State University,Miss Valley State,MSVAL,Miss Valley St
+311,SWAC,Panthers,Prairie View A&M University,Prairie View A&M
+312,SWAC,Jaguars,Southern University,Southern,SUTHR
+313,SWAC,Tigers,Texas Southern University,Texas Southern
+314,The Summit,Pioneers,University of Denver,Denver
+315,The Summit,Fighting Hawks,University of North Dakota,North Dakota
+316,The Summit,Bison,North Dakota State University,North Dakota State
+317,The Summit,Mavericks,University of Nebraska Omaha,Omaha
+318,The Summit,Golden Eagles,Oral Roberts University,Oral Roberts
+319,The Summit,Mastodons,Purdue University Fort Wayne,Purdue Fort Wayne
+320,The Summit,Coyotes,University of South Dakota,South Dakota
+321,The Summit,Jackrabbits,South Dakota State University,South Dakota State
+322,The Summit,Leathernecks,Western Illinois University,Western Illinois
+323,Sun Belt,Mountaineers,Appalachian State University,Appalachian State
+324,Sun Belt,Red Wolves,Arkansas State University,Arkansas State
+325,Sun Belt,Chanticleers,Coastal Carolina University,Coastal Carolina
+326,Sun Belt,Eagles,Georgia Southern University,Georgia Southern,Ga Southern,GASOU
+327,Sun Belt,Panthers,Georgia State University,Georgia State,GAST
+328,Sun Belt,Trojans,University of Arkansas at Little Rock,Little Rock
+329,Sun Belt,Ragin' Cajuns,University of Louisiana at Lafayette,Louisiana
+330,Sun Belt,Warhawks,University of Louisiana at Monroe,Louisiana–Monroe or ULM
+331,Sun Belt,Jaguars,University of South Alabama,South Alabama,S.ALA
+332,Sun Belt,Mavericks,University of Texas at Arlington,UT Arlington
+333,Sun Belt,Bobcats,Texas State University,Texas State
+334,Sun Belt,Trojans,Troy University,Troy
+335,West Coast,Cougars,Brigham Young University,BYU
+336,West Coast,Bulldogs,Gonzaga University,Gonzaga
+337,West Coast,Lions,Loyola Marymount University,Loyola Marymount
+338,West Coast,Tigers,University of the Pacific,Pacific
+339,West Coast,Waves,Pepperdine University,Pepperdine
+340,West Coast,Pilots,University of Portland,Portland
+341,West Coast,Gaels,Saint Mary's College of California,Saint Mary's
+342,West Coast,Toreros,University of San Diego,San Diego
+343,West Coast,Dons,University of San Francisco,San Francisco
+344,West Coast,Broncos,Santa Clara University,Santa Clara
+345,WAC,Lancers,California Baptist University,California Baptist
+346,WAC,Roadrunners,California State University Bakersfield,Cal State Bakersfield
+347,WAC,Cougars,Chicago State University,Chicago State
+348,WAC,Antelopes,Grand Canyon University,Grand Canyon
+349,WAC,Kangaroos,University of Missouri–Kansas City,UMKC
+350,WAC,Aggies,New Mexico State University,New Mexico State
+351,WAC,Redhawks,Seattle University,Seattle
+352,WAC,Wolverines,Utah Valley University,Utah Valley
+353,WAC,Vaqueros,University of Texas Rio Grande Valley,UTRGV
