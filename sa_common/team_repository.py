@@ -20,9 +20,13 @@ class FileTeamRepository(ITeamRepository):
     team_map = {}
 
     def __init__(self, connection_string):
-        with open(connection_string, 'r', errors="surrogateescape") as csvfile:
+        with open(connection_string, 'r', errors="surrogateescape", encoding="utf8") as csvfile:
             csvreader = csv.reader(csvfile)
             for row in csvreader:
+
+                # replace unicode dashes with ASCII
+                row = [x.replace("\u2013", "-") for x in row]
+
                 if(len(row) < 4):
                     print(f"Invalid row in team DB: {row}")
                     continue
@@ -38,7 +42,9 @@ class FileTeamRepository(ITeamRepository):
     def get_team(self, team_name):
         team = None
         for value in self.team_map.values():
+            #matches = [s for s in value.aliases if team_name.lower() == s.lower()]
             matches = [s for s in value.aliases if team_name.lower() == s.lower()]
+
             if(len(matches) > 0):
                 team = value
                 break

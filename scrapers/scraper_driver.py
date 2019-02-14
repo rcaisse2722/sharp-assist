@@ -12,8 +12,8 @@ project_directory = os.path.dirname(os.path.realpath('__file__'))
 team_repository = FileTeamRepository(os.path.join(project_directory, "sa_common", "team_maps", "ncaab.csv"))
 
 # Used for debugging/development, read the data from sample_data directory
-sample_prediction_file = "oddsshark_consensus_ncaab_2019_02_11.html"
-sample_lines_file = "espn_ncaab_2019_02_11.html"
+sample_prediction_file = "oddsshark_consensus_ncaab_2019_02_12.html"
+sample_lines_file = "espn_ncaab_2019_02_12.html"
 predictions_provider = FileHtmlProvider(os.path.join(project_directory, "scrapers", "sample_data", sample_prediction_file))
 lines_provider = FileHtmlProvider(os.path.join(project_directory, "scrapers", "sample_data", sample_lines_file))
 
@@ -37,10 +37,17 @@ for matchup in matchups:
         print(f"Failed to find matching prediction for matchup: {matchup}")
     else:
         mean_spread = statistics.mean(matchup.spread)
-        # TODO This shouldn't be absolute value. Need to know which to pick (favorite or underdog)
-        score_differential = abs((prediction.predictions[0].away_score + mean_spread) - prediction.predictions[0].home_score)
-        sharp_outcome.append((score_differential, matchup))
+        predicted_spread = -(prediction.predictions[0].away_score - prediction.predictions[0].home_score)
+        spread_differential = mean_spread - predicted_spread
+
+        pick = None # None represents push, prediction is exactly in line with actual spread
+        if(spread_differential > 0):
+            pick = matchup.away
+        elif(spread_differential < 0):
+            pick = matchup.home        
+
+        sharp_outcome.append((abs(spread_differential), pick, matchup))
 
 sharp_outcome.sort(key=lambda x: x[0], reverse=True)
 
-[print(f"{x[0]} - {x[1]}") for x in sharp_outcome]
+[print(f"{x[0]} PICK {x[1]} MATCHUP {x[2]}") for x in sharp_outcome]

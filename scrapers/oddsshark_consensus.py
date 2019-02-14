@@ -55,7 +55,7 @@ def scrape_page(data_provider, team_repository, is_verbose = False):
         matchup = MatchupPrediction(home_team, away_team)        
 
         if(verbose):
-            print(home_team.teamname + " at " + away_team.teamname)
+            print(away_team.teamname + " at " + home_team.teamname)
 
         game_data = game_tag.find("tbody").find_all("tr")
         matchup.add_predictions(parse_predicted_score(game_data[0]))
