@@ -28,7 +28,8 @@ print(f"Retrieved {len(matchups)} matchups and {len(predictions)} predictions")
 matchups.sort(key=lambda x: x.away.teamid)
 predictions.sort(key=lambda x: x.away.teamid)
 
-sharp_outcome = [] # will contain a list of tuples (score diff, matchup object)
+sharp_outcome_spread = [] # will contain a list of tuples (score diff, team pick, matchup object)
+sharp_outcome_ou = [] # will contain a list of tuples (score diff, team pick, matchup object)
 
 # Scraping complete, let's apply the logic
 for matchup in matchups:
@@ -46,8 +47,23 @@ for matchup in matchups:
         elif(spread_differential < 0):
             pick = matchup.home        
 
-        sharp_outcome.append((abs(spread_differential), pick, matchup))
+        sharp_outcome_spread.append((abs(spread_differential), pick, matchup))
 
-sharp_outcome.sort(key=lambda x: x[0], reverse=True)
+        mean_over_under = statistics.mean(matchup.over_under)
+        over_under_differential = (prediction.predictions[0].away_score + prediction.predictions[0].home_score) - mean_over_under
+        
+        isOver = True
+        if(over_under_differential < 0): # ignoring push if predicted score is exact
+            isOver = False
 
-[print(f"{x[0]} PICK {x[1]} MATCHUP {x[2]}") for x in sharp_outcome]
+        sharp_outcome_ou.append((abs(over_under_differential), isOver, matchup))
+
+sharp_outcome_spread.sort(key=lambda x: x[0], reverse=True)
+
+print("SPREAD PICKS")
+[print(f"{x[0]} PICK {x[1]} MATCHUP {x[2]}") for x in sharp_outcome_spread]
+
+sharp_outcome_ou.sort(key=lambda x: x[0], reverse=True)
+
+print("O/U PICKS")
+[print(f"{x[0]} OVER? {x[1]} MATCHUP {x[2]}") for x in sharp_outcome_ou]

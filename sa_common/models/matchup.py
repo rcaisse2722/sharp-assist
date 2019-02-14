@@ -14,7 +14,7 @@ class Matchup:
         self.over_under = []
 
     def __str__(self):
-        return f"{self.away} at {self.home}, {statistics.mean(self.spread)}"
+        return f"{self.away} at {self.home}, {statistics.mean(self.spread)}, {statistics.mean(self.over_under)}"
 
     def __repr__(self):
         return self.__str__()
