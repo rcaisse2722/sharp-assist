@@ -56,7 +56,8 @@ def scrape_lines(data_provider, team_repository, isVerbose = False):
             elif child.attrs["class"][0] == "oddrow" or child.attrs["class"][0] == "evenrow":
                 book_name, spread, over_under = scrape_book_data(child)
                 if(spread is None and over_under is None):
-                    print(f"No data found for {book_name}")
+                    if(verbose):
+                        print(f"No data found for {book_name}")
                     continue
 
                 if(verbose):
