@@ -3,6 +3,7 @@ import os
 import statistics
 from oddsshark_consensus import scrape_page
 from espn_scraper import scrape_lines
+from cbs_scraper import scrape_scores
 from sa_common.html_provider import FileHtmlProvider,UrlHtmlProvider
 from sa_common.team_repository import FileTeamRepository
 
@@ -61,9 +62,16 @@ for matchup in matchups:
 sharp_outcome_spread.sort(key=lambda x: x[0], reverse=True)
 
 print("SPREAD PICKS")
-[print(f"{x[0]} PICK {x[1]} MATCHUP {x[2]}") for x in sharp_outcome_spread]
+[print(f"{x[0]:.2f} PICK {x[1]} MATCHUP {x[2]}") for x in sharp_outcome_spread]
 
 sharp_outcome_ou.sort(key=lambda x: x[0], reverse=True)
 
 print("O/U PICKS")
-[print(f"{x[0]} OVER? {x[1]} MATCHUP {x[2]}") for x in sharp_outcome_ou]
+[print(f"{x[0]:.2f} OVER? {x[1]} MATCHUP {x[2]}") for x in sharp_outcome_ou]
+
+
+# Get results of previous days game
+sample_scores_file = "cbs_ncaab_2019_02_11.html"
+scores_provider = FileHtmlProvider(os.path.join(project_directory, "scrapers", "sample_data", sample_scores_file))
+
+scrape_scores(scores_provider, team_repository, True)
