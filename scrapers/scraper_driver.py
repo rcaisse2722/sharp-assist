@@ -18,6 +18,10 @@ sample_lines_file = "espn_ncaab_2019_02_12.html"
 predictions_provider = FileHtmlProvider(os.path.join(project_directory, "scrapers", "sample_data", sample_prediction_file))
 lines_provider = FileHtmlProvider(os.path.join(project_directory, "scrapers", "sample_data", sample_lines_file))
 
+# Real Data (TODO make URL configurable)
+#predictions_provider = UrlHtmlProvider("https://www.oddsshark.com/ncaab/computer-picks")
+#lines_provider = UrlHtmlProvider("http://www.espn.com/mens-college-basketball/lines")
+
 print("****** RETRIEVING MATCHUPS *********")
 matchups = scrape_lines(lines_provider, team_repository, True)
 
@@ -38,26 +42,28 @@ for matchup in matchups:
     if prediction is None:
         print(f"Failed to find matching prediction for matchup: {matchup}")
     else:
-        mean_spread = statistics.mean(matchup.spread)
-        predicted_spread = -(prediction.predictions[0].away_score - prediction.predictions[0].home_score)
-        spread_differential = mean_spread - predicted_spread
+        if(len(matchup.spread) > 0):
+            mean_spread = statistics.mean(matchup.spread)
+            predicted_spread = -(prediction.predictions[0].away_score - prediction.predictions[0].home_score)
+            spread_differential = mean_spread - predicted_spread
 
-        pick = None # None represents push, prediction is exactly in line with actual spread
-        if(spread_differential > 0):
-            pick = matchup.away
-        elif(spread_differential < 0):
-            pick = matchup.home        
+            pick = None # None represents push, prediction is exactly in line with actual spread
+            if(spread_differential > 0):
+                pick = matchup.away
+            elif(spread_differential < 0):
+                pick = matchup.home        
 
-        sharp_outcome_spread.append((abs(spread_differential), pick, matchup))
+            sharp_outcome_spread.append((abs(spread_differential), pick, matchup))
 
-        mean_over_under = statistics.mean(matchup.over_under)
-        over_under_differential = (prediction.predictions[0].away_score + prediction.predictions[0].home_score) - mean_over_under
-        
-        isOver = True
-        if(over_under_differential < 0): # ignoring push if predicted score is exact
-            isOver = False
+        if(len(matchup.over_under) > 0):
+            mean_over_under = statistics.mean(matchup.over_under)
+            over_under_differential = (prediction.predictions[0].away_score + prediction.predictions[0].home_score) - mean_over_under
+            
+            isOver = True
+            if(over_under_differential < 0): # ignoring push if predicted score is exact
+                isOver = False
 
-        sharp_outcome_ou.append((abs(over_under_differential), isOver, matchup))
+            sharp_outcome_ou.append((abs(over_under_differential), isOver, matchup))
 
 sharp_outcome_spread.sort(key=lambda x: x[0], reverse=True)
 
@@ -70,8 +76,8 @@ print("O/U PICKS")
 [print(f"{x[0]:.2f} OVER? {x[1]} MATCHUP {x[2]}") for x in sharp_outcome_ou]
 
 
-# Get results of previous days game
-sample_scores_file = "cbs_ncaab_2019_02_11.html"
+# # Get results of previous days game
+sample_scores_file = "cbs_ncaab_2019_02_13.html"
 scores_provider = FileHtmlProvider(os.path.join(project_directory, "scrapers", "sample_data", sample_scores_file))
 
 scrape_scores(scores_provider, team_repository, True)
