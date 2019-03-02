@@ -19,7 +19,7 @@ class UrlHtmlProvider(IHtmlProvider):
         self.path = path
 
     def get_html(self):
-        return urllib.request.urlopen(self.path)
+        return urllib.request.urlopen(self.path).read()
         
 # File implementation of IHtmlProvider
 class FileHtmlProvider(IHtmlProvider):
