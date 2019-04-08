@@ -1,5 +1,7 @@
 # sharp-assist
 
+Sharp-Assist is a set of utilities to assist in the prediction of game outcomes, both against-the-spread and over/under.
+
 ## Dependencies
 
 ### BeautifulSoup

@@ -1,0 +1,24 @@
+---
+debug: true
+debug_data:
+  # to make files usable across Windows/Linux, break up path directories into pieces and reassemble in scripts
+  predictions:
+    - scrapers
+    - sample_data
+    - oddsshark_consensus_ncaab_2019_02_12.html
+  lines:
+    - scrapers
+    - sample_data
+    - espn_ncaab_2019_02_12.html
+  scores:
+    - scrapers
+    - sample_data
+    - cbs_ncaab_2019_02_13.html
+team_repo:
+  - sa_common
+  - team_maps
+  - ncaab.csv
+live_data:
+  predictions: "https://www.oddsshark.com/ncaab/computer-picks"
+  lines: "http://www.espn.com/mens-college-basketball/lines"
+  scores: "TODO"
