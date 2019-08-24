@@ -41,7 +41,7 @@
 40,ASUN,Flames,Liberty University,Liberty,LIBRT
 41,ASUN,Bisons,Lipscomb University,Lipscomb,LIPSC
 42,ASUN,Highlanders,New Jersey Institute of Technology,NJIT,N.J. Tech
-43,ASUN,Lions,University of North Alabama,North Alabama
+43,ASUN,Lions,University of North Alabama,North Alabama,N.ALAB
 44,ASUN,Ospreys,University of North Florida,North Florida,N.FLA
 45,ASUN,Hatters,Stetson University,Stetson,STETS
 46,A-10,Wildcats,Davidson College,Davidson,DAVID
@@ -78,7 +78,7 @@
 77,Big Sky,Vikings,Portland State University,Portland State,PORST
 78,Big Sky,Hornets,California State University Sacramento,Sacramento State,Sacramento St,SACRA
 79,Big Sky,Thunderbirds,Southern Utah University,Southern Utah,SUTAH
-80,Big Sky,Wildcats,Weber State University,Weber State
+80,Big Sky,Wildcats,Weber State University,Weber State,WEBER
 81,Big South,Fighting Camels,Campbell University,Campbell,CAMBP
 82,Big South,Buccaneers,Charleston Southern University,Charleston Southern,Charleston So,CHASO,Charleston So.
 83,Big South,Runnin' Bulldogs,Gardner–Webb University,Gardner–Webb,G.WEB
@@ -253,7 +253,7 @@
 252,Pac-12,Bruins,University of California Los Angeles,UCLA
 253,Pac-12,Trojans,University of Southern California,USC
 254,Pac-12,Utes,University of Utah,Utah
-255,Pac-12,Huskies,University of Washington,Washington
+255,Pac-12,Huskies,University of Washington,Washington,WASH
 256,Pac-12,Cougars,Washington State University,Washington State,Washington St,WASST
 257,Patriot League,Eagles,American University,American,AMERN
 258,Patriot League,Black Knights,United States Military Academy,Army

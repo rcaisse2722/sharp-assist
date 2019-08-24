@@ -21,3 +21,10 @@ Used to correct issues with HTML before parsing
 #### Windows
 
 Download the binaries from [here](http://binaries.html-tidy.org/). Unzip and add directory with tidy.dll to system PATH variable.
+
+### AWS SDK for Python (Boto3)
+
+Used for interfacing with AWS services
+
+    pip3 install boto3
+

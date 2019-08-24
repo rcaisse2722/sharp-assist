@@ -5,14 +5,17 @@ debug_data:
   predictions:
     - scrapers
     - sample_data
+    - ncaab
     - oddsshark_consensus_ncaab_2019_02_12.html
   lines:
     - scrapers
     - sample_data
+    - ncaab
     - espn_ncaab_2019_02_12.html
   scores:
     - scrapers
     - sample_data
+    - ncaab
     - cbs_ncaab_2019_02_13.html
 team_repo:
   - sa_common

@@ -4,12 +4,9 @@ import re
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
 from sa_common.models.baseteam import BaseTeam
 from sa_common.models.matchup import Matchup
+import sa_common.regex_helpers
 from bs4 import BeautifulSoup
 from tidylib import tidy_document
-
-# TODO Move these into constants file in sa_common? May be useful in other scrapers
-TIME_REGEX = r'^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$'
-RANKING_REGEX = r'\#[0-9]{1,2}'
 
 def scrape_lines(data_provider, team_repository, isVerbose = False):
     global verbose
@@ -88,7 +85,7 @@ def scrape_teams(matchup_tag):
     # [5] PM
     # So find the index of 'at' and the index of the game time to extract teams
     at_index = split_string.index('at')
-    gametime_index = [i for i, item in enumerate(split_string) if re.search(TIME_REGEX, item)][0]
+    gametime_index = [i for i, item in enumerate(split_string) if re.search(sa_common.regex_helpers.TIME_REGEX, item)][0]
 
     away_team_name = " ".join(split_string[0:at_index])
     home_team_name = " ".join(split_string[at_index + 1:gametime_index])
@@ -96,7 +93,7 @@ def scrape_teams(matchup_tag):
     #home_team_name = " ".join([e for i, e in enumerate(split_string) if i in [at_index + 1, gametime_index - 1]])
 
     # remove potential ranking from strings ('#3 Kansas')
-    return [re.sub(RANKING_REGEX, '', x).strip() for x in [away_team_name, home_team_name]]
+    return [re.sub(sa_common.regex_helpers.RANKING_REGEX, '', x).strip() for x in [away_team_name, home_team_name]]
 
 # Scrape line and over/under data for an individual book
 # <tr class="oddrow">
@@ -144,5 +141,6 @@ def scrape_book_data(book_tag):
             except:
                 over_under = None
             break
+
 
     return book_name,spread,over_under

@@ -26,8 +26,16 @@ else:
 print("****** RETRIEVING MATCHUPS *********")
 matchups = scrape_lines(lines_provider, team_repository, True)
 
+if matchups == None or len(matchups) == 0:
+    print("No matchups found.")
+    exit
+
 print("****** RETRIEVING PREDICTIONS *********")
 predictions = scrape_page(predictions_provider, team_repository, True)
+
+if predictions == None or len(predictions) == 0:
+    print("No predictions found.")
+    exit
 
 print(f"Retrieved {len(matchups)} matchups and {len(predictions)} predictions")
 
